@@ -26,6 +26,11 @@
     <div id="root"></div>
 
     <script type="text/babel">
+// 确保只在浏览器环境中运行
+if (typeof window === 'undefined') {
+    // 如果是服务器端渲染，什么都不做
+    var AdvisorApp = function() { return null; };
+} else {
         const { useState, useRef, useEffect } = React;
 
         // ── Palette ──────────────────────────────────────────────────────────
@@ -597,7 +602,8 @@ When answering: challenge the premise of the question before answering it, apply
             );
         }
         
-        ReactDOM.createRoot(document.getElementById("root")).render(<AdvisorApp />);
+       ReactDOM.createRoot(document.getElementById("root")).render(<AdvisorApp />);
+}
     </script>
 </body>
 </html>
