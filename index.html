@@ -6,7 +6,7 @@
     <title>Symposium · 思想家对话</title>
     <!-- 引入 React 和 ReactDOM -->
     <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.development.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.development.js"></script>
     <!-- 引入 Babel 以支持 JSX 语法 -->
     <script src="https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"></script>
     <style>
@@ -602,7 +602,7 @@ When answering: challenge the premise of the question before answering it, apply
             );
         }
         
-       ReactDOM.createRoot(document.getElementById("root")).render(<AdvisorApp />);
+       ReactDOM.render(<AdvisorApp />, document.getElementById("root"));
 }
     </script>
 </body>
