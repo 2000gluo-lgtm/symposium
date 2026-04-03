@@ -391,7 +391,7 @@ When answering: challenge the premise of the question before answering it, apply
 
         // ── API调用（改成你的后端）──────────────────────────────────────────────
         async function chat(systemPrompt, messages) {
-            const response = await fetch('http://localhost:3000/chat', {
+            const response = await fetch('https://symposium-api.onrender.com/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
